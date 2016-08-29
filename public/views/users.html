@@ -1,0 +1,37 @@
+<div class="col-md-12">
+<a class="pull-right btn btn-success" href="#/profile"><span class="glyphicon glyphicon-plus"></span> New User</a>
+  <h2>{{title}}</h2>
+  <hr>
+  <form novalidate>
+    <table class="table table-striped" ng-show="editView">
+      <tr>
+        <td><input type="text" class="form-control" ng-model="user.fname" placeholder="first name"></td>
+        <td><input type="text" class="form-control" ng-model="user.lname" placeholder="last name"></td>
+        <td><input type="email" class="form-control" ng-model="user.email" placeholder="email"></td>
+        <td><input type="text" class="form-control" ng-model="user.city" placeholder="city"></td>
+        <td><button class="btn btn-primary" ng-click="updateUser(user._id)">Update</button></td>
+      </tr>
+    </table>
+  </form>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>City</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="user in users">
+        <td>{{user.fname}} {{user.lname}}</td>
+        <td><a href="mailto:{{user.email}}">{{user.email}}</a></td>
+        <td><p>{{user.city}}</p></td>
+        <td width="120">
+          <button class="btn btn-sm btn-warning" ng-click="editUser(user._id)"><span class="glyphicon glyphicon-pencil"></span></button>
+          <button class="btn btn-sm btn-danger" ng-click="deleteUser(user._id)"><span class="glyphicon glyphicon-remove"></span></button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

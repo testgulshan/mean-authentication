@@ -1,0 +1,16 @@
+main {
+  margin-top: 90px;
+}
+
+.border-box {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 4px;
+}
+.border-box h2 {
+  margin-top: auto;
+}
+
+.btn-success {
+  border: none;
+}
