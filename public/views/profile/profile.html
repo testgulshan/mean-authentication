@@ -1,0 +1,22 @@
+<div class="col-md-12">
+  <h2>{{title}}</h2>
+  <hr>
+
+  <!-- admin -->
+  <div ng-show="currentUser.roles.indexOf('admin') > -1">
+    <h3>Admin</h3>
+    <table class="table table-striped table-bordered">
+      <tbody>
+        <tr ng-repeat="user in users">
+          <td>{{user.email}}</td>
+        </tr>
+      </tobdy>
+    </table>
+  </div>
+
+  <!-- student -->
+  <div ng-show="currentUser.roles.indexOf('student') > -1">
+    <h3>Student</h3>
+  </div>
+
+</div>

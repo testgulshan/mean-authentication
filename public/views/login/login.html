@@ -1,0 +1,19 @@
+<div class="col-md-4 col-md-offset-4">
+  <div class="border-box">
+    <h2>{{title}}</h2>
+    <hr>
+    <form novalidate>
+      <div class="form-group">
+        <label>Email address</label>
+        <input type="text" class="form-control" ng-model="user.email">
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" class="form-control" ng-model="user.password">
+      </div>
+      <button type="submit" class="btn btn-primary" ng-click="login(user);">Sign In</button>
+    </form>
+  </div>
+  <hr>
+  <p class="help-block">Not a registered user? <a href="#/signup">Sign Up</a></p>
+</div>
